@@ -1,18 +1,212 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="utf-8">
-        <title>Лет ми спик фром май харт</title>
-        <link rel="stylesheet" href="index.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="author" content="Бабуля">
+        <style>
+            table {
+                border: 4px double black;
+                border-collapse: collapse;
+                margin: 5px;
+                padding: 5px;
+                overflow: hidden;
+            }
+            tr:hover {
+                background:#cd8c95;
+                opacity: 0.7;
+            }
+            td {
+                padding: 5px;
+                z-index: 2; 
+            }
+            .lightgrey {
+                background:#DCDCDC;
+            }
+            .darkgray {
+                background:#C0C0C0;
+            }
+            .gray {
+                background:#A0A0A0;
+            }
+            td, th {
+                position: relative;
+            }
+            td:hover::after,
+            th:hover::after  {
+                content: "";
+                position: absolute;
+                background: #cd8c95;
+                opacity: 0.5;
+                left: 0;
+                top: -5000px;
+                height: 10000px;
+                width: 100%;
+            }
+            .valid_button
+            {
+                display: none;
+            }
+            form:valid .valid_button
+            {
+                display: block;
+            }
+        </style>
     </head>
     <body>
-        <!-- Поле для фильтрации по городу -->
-        <input
-            type="text"
-            placeholder="Город отправления"
-            value=""
-            onkeyup="this.setAttribute('value', this.value)">
-
-        <!-- Здесь применять вашу самую сильную магию -->
+        <h1>Шереметьево</h1>
+        <table border="1">
+            <tr class="gray">
+                <td>тип рейса</td>
+                <td>номер рейса</td>
+                <td>код авиакомпании</td>
+                <td>логотип авиакомпании</td>
+                <td>время по расписанию</td>
+                <td>номер терминала</td>
+                <td>статус рейса</td>
+            </tr>
+            <tr class="lightgrey">
+                <td>вылет</td>
+                <td>4390</td>
+                <td>AF</td>
+                <td><img src="af.png"></td>
+                <td>12:45</td>
+                <td>D</td>
+                <td>совершил посадку</td>
+            </tr>
+            <tr class="darkgray">
+                <td>вылет</td>
+                <td>7930</td>
+                <td>SU</td>
+                <td><img src="su.jpg"></td>
+                <td>14:00</td>
+                <td>A</td>
+                <td>совершил посадку </td>
+            </tr>
+            <tr class="lightgrey">
+                <td>прилет</td>
+                <td>5490</td>
+                <td>AF</td>
+                <td><img src="af.png"></td>
+                <td>14:30</td>
+                <td>C</td>
+                <td>вылетел</td>
+            </tr>
+            <tr class="darkgray">
+                <td>вылет</td>
+                <td>8630</td>
+                <td>AF</td>
+                <td><img src="af.png"></td>
+                <td>15:30</td>
+                <td>F</td>
+                <td>совершил посадку </td>
+            </tr>
+            <tr class="lightgrey">
+                <td>прилет</td>
+                <td>9376</td>
+                <td>AF</td>
+                <td><img src="af.png"></td>
+                <td>16:25</td>
+                <td>C</td>
+                <td>вылетел</td>
+            </tr>
+            <tr class="darkgray">
+                <td>прилет</td>
+                <td>1873</td>
+                <td>EL</td>
+                <td><img src="el.png"></td>
+                <td>18:28</td>
+                <td>D</td>
+                <td>отменен</td>
+            </tr>
+            <tr class="lightgrey">
+                <td>вылет</td>
+                <td>1243</td>
+                <td>SU</td>
+                <td><img src="su.jpg"></td>
+                <td>19:45</td>
+                <td>B</td>
+                <td>посадка закончена</td>
+            </tr>
+            <tr class="darkgray">
+                <td>вылет</td>
+                <td>3251</td>
+                <td>AF</td>
+                <td><img src="af.png"></td>
+                <td>20:18</td>
+                <td>A</td>
+                <td>посадка закончена</td>
+            </tr>
+            <tr class="lightgrey">
+                <td>прилет</td>
+                <td>2564</td>
+                <td>AF</td>
+                <td><img src="af.png"></td>
+                <td>21:30</td>
+                <td>B</td>
+                <td>посадка закончена</td>
+            </tr>
+            <tr class="darkgray">
+                <td>вылет</td>
+                <td>7894</td>
+                <td>EL</td>
+                <td><img src="el.png"></td>
+                <td>22:15</td>
+                <td>C</td>
+                <td>посадка закончена</td>
+            </tr>
+            <tr class="lightgrey">
+                <td>прилет</td>
+                <td>6579</td>
+                <td>AF</td>
+                <td><img src="af.png"></td>
+                <td>22:55</td>
+                <td>D</td>
+                <td>ожидается</td>
+            </tr>
+            <tr class="darkgray">
+                <td>прилет</td>
+                <td>8923</td>
+                <td>SU</td>
+                <td><img src="su.jpg"></td>
+                <td>23:10</td>
+                <td>E</td>
+                <td>ожидается</td>
+            </tr>
+            <tr class="lightgrey">
+                <td>прилет</td>
+                <td>8405</td>
+                <td>SU</td>
+                <td><img src="su.jpg"></td>
+                <td>23:25</td>
+                <td>D</td>
+                <td>ожидается</td>
+            </tr>
+            <tr class="darkgray">
+                <td>вылет</td>
+                <td>6794</td>
+                <td>EL</td>
+                <td><img src="el.png"></td>
+                <td>23:37</td>
+                <td>F</td>
+                <td>ожидается</td>
+            </tr>
+            <tr class="lightgrey">
+                <td>вылет</td>
+                <td>1747</td>
+                <td>AF</td>
+                <td><img src="af.png"></td>
+                <td>23:57</td>
+                <td>A</td>
+                <td>ожидается</td>
+            </tr>
+        </table>
+        <h2>ФОРМА, КОТОРУЮ ТАК ИЩЕТ ЛЕОНИД ВИКТОРОВИЧ</h2>
+        <form>
+            Введите, пожалуйста, адресс электронной почты<br>
+            <input type="email" pattern="^[a-zA-Z]+[a-zA-Z0-9]*@[a-zA-Z0-9]+.[a-zA-Z0-9]+" placeholder="mur@nut.ru" required><br>
+            Введите, пожалуйста, номер телефона<br>
+            <input type="tel" pattern="^\+7\d{10}" placeholder="+79120000078" required><br><br>
+            <input type="submit" value="Отправить данные о рейсе на телефон" class="valid_button">
+        </form>
     </body>
 </html>
